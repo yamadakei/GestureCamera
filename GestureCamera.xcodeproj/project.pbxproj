@@ -1,0 +1,381 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B2BB4F9316C0C0700011F52E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2BB4F9216C0C0700011F52E /* UIKit.framework */; };
+		B2BB4F9516C0C0700011F52E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2BB4F9416C0C0700011F52E /* Foundation.framework */; };
+		B2BB4F9716C0C0700011F52E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2BB4F9616C0C0700011F52E /* CoreGraphics.framework */; };
+		B2BB4F9D16C0C0700011F52E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B2BB4F9B16C0C0700011F52E /* InfoPlist.strings */; };
+		B2BB4F9F16C0C0700011F52E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B2BB4F9E16C0C0700011F52E /* main.m */; };
+		B2BB4FA316C0C0700011F52E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B2BB4FA216C0C0700011F52E /* AppDelegate.m */; };
+		B2BB4FA516C0C0700011F52E /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = B2BB4FA416C0C0700011F52E /* Default.png */; };
+		B2BB4FA716C0C0700011F52E /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B2BB4FA616C0C0700011F52E /* Default@2x.png */; };
+		B2BB4FA916C0C0700011F52E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B2BB4FA816C0C0700011F52E /* Default-568h@2x.png */; };
+		B2BB4FAC16C0C0700011F52E /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2BB4FAA16C0C0700011F52E /* MainStoryboard.storyboard */; };
+		B2BB4FAF16C0C0700011F52E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2BB4FAE16C0C0700011F52E /* ViewController.m */; };
+		B2BB502116C0C25B0011F52E /* libGPUImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B2BB501E16C0C2310011F52E /* libGPUImage.a */; };
+		B2BB502316C0C3950011F52E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2BB502216C0C3950011F52E /* AVFoundation.framework */; };
+		B2BB502516C0C3A00011F52E /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2BB502416C0C3A00011F52E /* CoreMedia.framework */; };
+		B2BB502716C0C3B10011F52E /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2BB502616C0C3B10011F52E /* CoreVideo.framework */; };
+		B2BB502916C0C3C00011F52E /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2BB502816C0C3C00011F52E /* OpenGLES.framework */; };
+		B2BB502B16C0C3C80011F52E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2BB502A16C0C3C80011F52E /* QuartzCore.framework */; };
+		B2BB504916C0D0A40011F52E /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2BB504816C0D0A40011F52E /* AssetsLibrary.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B2BB501D16C0C2310011F52E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B2BB501416C0C2310011F52E /* GPUImage.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BCF1A33414DDB1EC00852800;
+			remoteInfo = GPUImage;
+		};
+		B2BB501F16C0C2310011F52E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B2BB501416C0C2310011F52E /* GPUImage.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BCF1A34414DDB1EC00852800;
+			remoteInfo = GPUImageTests;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B2BB4F8E16C0C0700011F52E /* GestureCamera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GestureCamera.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B2BB4F9216C0C0700011F52E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		B2BB4F9416C0C0700011F52E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		B2BB4F9616C0C0700011F52E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		B2BB4F9A16C0C0700011F52E /* GestureCamera-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GestureCamera-Info.plist"; sourceTree = "<group>"; };
+		B2BB4F9C16C0C0700011F52E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B2BB4F9E16C0C0700011F52E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B2BB4FA016C0C0700011F52E /* GestureCamera-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GestureCamera-Prefix.pch"; sourceTree = "<group>"; };
+		B2BB4FA116C0C0700011F52E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		B2BB4FA216C0C0700011F52E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B2BB4FA416C0C0700011F52E /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		B2BB4FA616C0C0700011F52E /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		B2BB4FA816C0C0700011F52E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		B2BB4FAB16C0C0700011F52E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		B2BB4FAD16C0C0700011F52E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		B2BB4FAE16C0C0700011F52E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		B2BB501416C0C2310011F52E /* GPUImage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GPUImage.xcodeproj; path = GestureCamera/framework/GPUImage.xcodeproj; sourceTree = "<group>"; };
+		B2BB502216C0C3950011F52E /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		B2BB502416C0C3A00011F52E /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		B2BB502616C0C3B10011F52E /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		B2BB502816C0C3C00011F52E /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		B2BB502A16C0C3C80011F52E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		B2BB504816C0D0A40011F52E /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B2BB4F8B16C0C0700011F52E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2BB504916C0D0A40011F52E /* AssetsLibrary.framework in Frameworks */,
+				B2BB502B16C0C3C80011F52E /* QuartzCore.framework in Frameworks */,
+				B2BB502916C0C3C00011F52E /* OpenGLES.framework in Frameworks */,
+				B2BB502716C0C3B10011F52E /* CoreVideo.framework in Frameworks */,
+				B2BB502516C0C3A00011F52E /* CoreMedia.framework in Frameworks */,
+				B2BB502316C0C3950011F52E /* AVFoundation.framework in Frameworks */,
+				B2BB502116C0C25B0011F52E /* libGPUImage.a in Frameworks */,
+				B2BB4F9316C0C0700011F52E /* UIKit.framework in Frameworks */,
+				B2BB4F9516C0C0700011F52E /* Foundation.framework in Frameworks */,
+				B2BB4F9716C0C0700011F52E /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B2BB4F8316C0C0700011F52E = {
+			isa = PBXGroup;
+			children = (
+				B2BB504816C0D0A40011F52E /* AssetsLibrary.framework */,
+				B2BB502A16C0C3C80011F52E /* QuartzCore.framework */,
+				B2BB502816C0C3C00011F52E /* OpenGLES.framework */,
+				B2BB502616C0C3B10011F52E /* CoreVideo.framework */,
+				B2BB502416C0C3A00011F52E /* CoreMedia.framework */,
+				B2BB502216C0C3950011F52E /* AVFoundation.framework */,
+				B2BB4F9816C0C0700011F52E /* GestureCamera */,
+				B2BB4F9116C0C0700011F52E /* Frameworks */,
+				B2BB4F8F16C0C0700011F52E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B2BB4F8F16C0C0700011F52E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B2BB4F8E16C0C0700011F52E /* GestureCamera.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B2BB4F9116C0C0700011F52E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B2BB501416C0C2310011F52E /* GPUImage.xcodeproj */,
+				B2BB4F9216C0C0700011F52E /* UIKit.framework */,
+				B2BB4F9416C0C0700011F52E /* Foundation.framework */,
+				B2BB4F9616C0C0700011F52E /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B2BB4F9816C0C0700011F52E /* GestureCamera */ = {
+			isa = PBXGroup;
+			children = (
+				B2BB4FA116C0C0700011F52E /* AppDelegate.h */,
+				B2BB4FA216C0C0700011F52E /* AppDelegate.m */,
+				B2BB4FAA16C0C0700011F52E /* MainStoryboard.storyboard */,
+				B2BB4FAD16C0C0700011F52E /* ViewController.h */,
+				B2BB4FAE16C0C0700011F52E /* ViewController.m */,
+				B2BB4F9916C0C0700011F52E /* Supporting Files */,
+			);
+			path = GestureCamera;
+			sourceTree = "<group>";
+		};
+		B2BB4F9916C0C0700011F52E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B2BB4F9A16C0C0700011F52E /* GestureCamera-Info.plist */,
+				B2BB4F9B16C0C0700011F52E /* InfoPlist.strings */,
+				B2BB4F9E16C0C0700011F52E /* main.m */,
+				B2BB4FA016C0C0700011F52E /* GestureCamera-Prefix.pch */,
+				B2BB4FA416C0C0700011F52E /* Default.png */,
+				B2BB4FA616C0C0700011F52E /* Default@2x.png */,
+				B2BB4FA816C0C0700011F52E /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B2BB501516C0C2310011F52E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B2BB501E16C0C2310011F52E /* libGPUImage.a */,
+				B2BB502016C0C2310011F52E /* GPUImageTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B2BB4F8D16C0C0700011F52E /* GestureCamera */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B2BB4FB216C0C0700011F52E /* Build configuration list for PBXNativeTarget "GestureCamera" */;
+			buildPhases = (
+				B2BB4F8A16C0C0700011F52E /* Sources */,
+				B2BB4F8B16C0C0700011F52E /* Frameworks */,
+				B2BB4F8C16C0C0700011F52E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GestureCamera;
+			productName = GestureCamera;
+			productReference = B2BB4F8E16C0C0700011F52E /* GestureCamera.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B2BB4F8516C0C0700011F52E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = "山田 慶";
+			};
+			buildConfigurationList = B2BB4F8816C0C0700011F52E /* Build configuration list for PBXProject "GestureCamera" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = B2BB4F8316C0C0700011F52E;
+			productRefGroup = B2BB4F8F16C0C0700011F52E /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = B2BB501516C0C2310011F52E /* Products */;
+					ProjectRef = B2BB501416C0C2310011F52E /* GPUImage.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				B2BB4F8D16C0C0700011F52E /* GestureCamera */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		B2BB501E16C0C2310011F52E /* libGPUImage.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libGPUImage.a;
+			remoteRef = B2BB501D16C0C2310011F52E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B2BB502016C0C2310011F52E /* GPUImageTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = GPUImageTests.octest;
+			remoteRef = B2BB501F16C0C2310011F52E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B2BB4F8C16C0C0700011F52E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2BB4F9D16C0C0700011F52E /* InfoPlist.strings in Resources */,
+				B2BB4FA516C0C0700011F52E /* Default.png in Resources */,
+				B2BB4FA716C0C0700011F52E /* Default@2x.png in Resources */,
+				B2BB4FA916C0C0700011F52E /* Default-568h@2x.png in Resources */,
+				B2BB4FAC16C0C0700011F52E /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B2BB4F8A16C0C0700011F52E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2BB4F9F16C0C0700011F52E /* main.m in Sources */,
+				B2BB4FA316C0C0700011F52E /* AppDelegate.m in Sources */,
+				B2BB4FAF16C0C0700011F52E /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		B2BB4F9B16C0C0700011F52E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B2BB4F9C16C0C0700011F52E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		B2BB4FAA16C0C0700011F52E /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B2BB4FAB16C0C0700011F52E /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B2BB4FB016C0C0700011F52E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		B2BB4FB116C0C0700011F52E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B2BB4FB316C0C0700011F52E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GestureCamera/GestureCamera-Prefix.pch";
+				HEADER_SEARCH_PATHS = "GestureCamera/framework/**";
+				INFOPLIST_FILE = "GestureCamera/GestureCamera-Info.plist";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		B2BB4FB416C0C0700011F52E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GestureCamera/GestureCamera-Prefix.pch";
+				HEADER_SEARCH_PATHS = "GestureCamera/framework/**";
+				INFOPLIST_FILE = "GestureCamera/GestureCamera-Info.plist";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B2BB4F8816C0C0700011F52E /* Build configuration list for PBXProject "GestureCamera" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B2BB4FB016C0C0700011F52E /* Debug */,
+				B2BB4FB116C0C0700011F52E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B2BB4FB216C0C0700011F52E /* Build configuration list for PBXNativeTarget "GestureCamera" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B2BB4FB316C0C0700011F52E /* Debug */,
+				B2BB4FB416C0C0700011F52E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B2BB4F8516C0C0700011F52E /* Project object */;
+}
