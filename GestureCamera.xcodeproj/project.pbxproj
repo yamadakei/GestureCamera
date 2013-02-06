@@ -28,6 +28,7 @@
 		B2BB506016C212FD0011F52E /* flashAuto@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B2BB505D16C212FD0011F52E /* flashAuto@2x.png */; };
 		B2BB506116C212FD0011F52E /* flashOff@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B2BB505E16C212FD0011F52E /* flashOff@2x.png */; };
 		B2BB506216C212FD0011F52E /* flashOn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B2BB505F16C212FD0011F52E /* flashOn@2x.png */; };
+		B2BB507B16C2951E0011F52E /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2BB507A16C2951E0011F52E /* AudioToolbox.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +75,7 @@
 		B2BB505D16C212FD0011F52E /* flashAuto@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "flashAuto@2x.png"; sourceTree = "<group>"; };
 		B2BB505E16C212FD0011F52E /* flashOff@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "flashOff@2x.png"; sourceTree = "<group>"; };
 		B2BB505F16C212FD0011F52E /* flashOn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "flashOn@2x.png"; sourceTree = "<group>"; };
+		B2BB507A16C2951E0011F52E /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2BB507B16C2951E0011F52E /* AudioToolbox.framework in Frameworks */,
 				B2BB504916C0D0A40011F52E /* AssetsLibrary.framework in Frameworks */,
 				B2BB502B16C0C3C80011F52E /* QuartzCore.framework in Frameworks */,
 				B2BB502916C0C3C00011F52E /* OpenGLES.framework in Frameworks */,
@@ -100,6 +103,7 @@
 		B2BB4F8316C0C0700011F52E = {
 			isa = PBXGroup;
 			children = (
+				B2BB507A16C2951E0011F52E /* AudioToolbox.framework */,
 				B2BB504816C0D0A40011F52E /* AssetsLibrary.framework */,
 				B2BB502A16C0C3C80011F52E /* QuartzCore.framework */,
 				B2BB502816C0C3C00011F52E /* OpenGLES.framework */,

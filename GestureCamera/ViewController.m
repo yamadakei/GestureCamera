@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import <AssetsLibrary/AssetsLibrary.h>
 #import <AVFoundation/AVFoundation.h>
+#import <AudioToolbox/AudioToolbox.h>
 
 @interface ViewController ()
 {
@@ -204,8 +205,6 @@
     }
 }
 
-#pragma mark - save
-
 - (void) handleTwoFingersLongPressGesture:(UILongPressGestureRecognizer*)sender
 {
     NSLog(@"%f",pinchTransform.a);
@@ -215,7 +214,7 @@
     if (pinchTransform.a > 1.f) {
         NSLog(@"UIGetScreenImage");
         CGImageRef imageRef = UIGetScreenImage();
-        UIImage * proseccedImage = [UIImage imageWithCGImage:imageRef];
+        UIImage* proseccedImage = [UIImage imageWithCGImage:imageRef];
         CGImageRelease(imageRef);
         
         CGFloat width = 320;
@@ -231,18 +230,18 @@
         
         UIGraphicsEndImageContext();
         
-        ALAssetsLibrary *library = [[ALAssetsLibrary alloc] init];
-        
-        [library writeImageToSavedPhotosAlbum:finalImage.CGImage
-                                     metadata:nil
-                              completionBlock:^(NSURL *assetURL, NSError *error){
-                                  if (!error) {
-                                      NSLog(@"保存成功！");
-
+        [stillCamera capturePhotoAsImageProcessedUpToFilter:filterGroup withCompletionHandler:^(UIImage *processedImage, NSError *error){
+            ALAssetsLibrary *library = [[ALAssetsLibrary alloc] init];
+            
+            [library writeImageToSavedPhotosAlbum:finalImage.CGImage
+                                         metadata:nil
+                                  completionBlock:^(NSURL *assetURL, NSError *error){
+                                      if (!error) {
+                                          NSLog(@"保存成功！");
+                                      }
                                   }
-                              }
-         ];
-    }else{
+             ];
+        }];    }else{
     GPUImageFilterGroup* filterGroupForCrop = [[GPUImageFilterGroup alloc] init];
     
     [filterGroupForCrop addTarget:filterGroup];
