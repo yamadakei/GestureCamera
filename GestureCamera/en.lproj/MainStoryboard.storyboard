@@ -9,29 +9,63 @@
             <objects>
                 <viewController id="2" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3">
-                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EP2-Yd-Fe9" customClass="GPUImageView">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9fa-3K-FY6">
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EP2-Yd-Fe9" customClass="GPUImageView">
+                                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <gestureRecognizers/>
+                                    </view>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="EP2-Yd-Fe9" secondAttribute="bottom" constant="-134" id="C7p-oI-gtB"/>
+                                    <constraint firstAttribute="trailing" secondItem="EP2-Yd-Fe9" secondAttribute="trailing" constant="-69" id="UWh-2U-KwJ"/>
+                                    <constraint firstItem="EP2-Yd-Fe9" firstAttribute="leading" secondItem="9fa-3K-FY6" secondAttribute="leading" constant="-91" id="kTo-XB-XZU"/>
+                                    <constraint firstItem="EP2-Yd-Fe9" firstAttribute="top" secondItem="9fa-3K-FY6" secondAttribute="top" constant="-150" id="rqq-yB-jgJ"/>
+                                </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="headTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W8e-yj-kzo">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="62" id="0F4-gG-KTx"/>
+                                    <constraint firstAttribute="height" constant="33" id="xfO-W0-GZ2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Button" image="flashOff@2x.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="EP2-Yd-Fe9" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="9tU-8y-P6h"/>
-                            <constraint firstItem="EP2-Yd-Fe9" firstAttribute="bottom" secondItem="3" secondAttribute="bottom" type="default" id="FKc-Xp-gtD"/>
-                            <constraint firstItem="EP2-Yd-Fe9" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="Ih4-0F-JwI"/>
-                            <constraint firstItem="EP2-Yd-Fe9" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="UQv-Jd-F1T"/>
+                            <constraint firstItem="9fa-3K-FY6" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="FIS-8C-A2L"/>
+                            <constraint firstItem="9fa-3K-FY6" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="I92-4e-Cpg"/>
+                            <constraint firstItem="W8e-yj-kzo" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="19" id="T6x-40-zMd"/>
+                            <constraint firstItem="W8e-yj-kzo" firstAttribute="top" secondItem="3" secondAttribute="top" constant="28" id="TUG-sC-M6Z"/>
+                            <constraint firstItem="9fa-3K-FY6" firstAttribute="centerY" secondItem="3" secondAttribute="centerY" type="default" id="bs3-EU-7T3"/>
+                            <constraint firstItem="9fa-3K-FY6" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="lbM-vb-TtF"/>
                         </constraints>
                     </view>
+                    <nil key="simulatedStatusBarMetrics"/>
                     <connections>
+                        <outlet property="flashButton" destination="W8e-yj-kzo" id="mfH-GR-U0w"/>
                         <outlet property="imageView" destination="EP2-Yd-Fe9" id="a8m-tM-DfG"/>
+                        <outlet property="transparentView" destination="9fa-3K-FY6" id="Rs1-tp-Rd4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="flashOff@2x.png" width="140" height="70"/>
+    </resources>
     <classes>
         <class className="GPUImageView" superclassName="UIView">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/GPUImageView.h"/>
@@ -42,8 +76,9 @@
         <class className="ViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
             <relationships>
-                <relationship kind="action" name="pressSaveBtn:"/>
+                <relationship kind="outlet" name="flashButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="imageView" candidateClass="GPUImageView"/>
+                <relationship kind="outlet" name="transparentView" candidateClass="UIView"/>
             </relationships>
         </class>
     </classes>

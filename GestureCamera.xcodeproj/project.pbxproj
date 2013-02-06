@@ -25,6 +25,9 @@
 		B2BB502916C0C3C00011F52E /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2BB502816C0C3C00011F52E /* OpenGLES.framework */; };
 		B2BB502B16C0C3C80011F52E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2BB502A16C0C3C80011F52E /* QuartzCore.framework */; };
 		B2BB504916C0D0A40011F52E /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2BB504816C0D0A40011F52E /* AssetsLibrary.framework */; };
+		B2BB506016C212FD0011F52E /* flashAuto@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B2BB505D16C212FD0011F52E /* flashAuto@2x.png */; };
+		B2BB506116C212FD0011F52E /* flashOff@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B2BB505E16C212FD0011F52E /* flashOff@2x.png */; };
+		B2BB506216C212FD0011F52E /* flashOn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B2BB505F16C212FD0011F52E /* flashOn@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +71,9 @@
 		B2BB502816C0C3C00011F52E /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		B2BB502A16C0C3C80011F52E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		B2BB504816C0D0A40011F52E /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		B2BB505D16C212FD0011F52E /* flashAuto@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "flashAuto@2x.png"; sourceTree = "<group>"; };
+		B2BB505E16C212FD0011F52E /* flashOff@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "flashOff@2x.png"; sourceTree = "<group>"; };
+		B2BB505F16C212FD0011F52E /* flashOn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "flashOn@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +139,7 @@
 				B2BB4FAA16C0C0700011F52E /* MainStoryboard.storyboard */,
 				B2BB4FAD16C0C0700011F52E /* ViewController.h */,
 				B2BB4FAE16C0C0700011F52E /* ViewController.m */,
+				B2BB505C16C212FD0011F52E /* Images */,
 				B2BB4F9916C0C0700011F52E /* Supporting Files */,
 			);
 			path = GestureCamera;
@@ -159,6 +166,16 @@
 				B2BB502016C0C2310011F52E /* GPUImageTests.octest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		B2BB505C16C212FD0011F52E /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				B2BB505D16C212FD0011F52E /* flashAuto@2x.png */,
+				B2BB505E16C212FD0011F52E /* flashOff@2x.png */,
+				B2BB505F16C212FD0011F52E /* flashOn@2x.png */,
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,6 +257,9 @@
 				B2BB4FA716C0C0700011F52E /* Default@2x.png in Resources */,
 				B2BB4FA916C0C0700011F52E /* Default-568h@2x.png in Resources */,
 				B2BB4FAC16C0C0700011F52E /* MainStoryboard.storyboard in Resources */,
+				B2BB506016C212FD0011F52E /* flashAuto@2x.png in Resources */,
+				B2BB506116C212FD0011F52E /* flashOff@2x.png in Resources */,
+				B2BB506216C212FD0011F52E /* flashOn@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

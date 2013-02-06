@@ -11,8 +11,8 @@
 
 @interface ViewController : UIViewController
 @property (strong, nonatomic) IBOutlet GPUImageView *imageView;
-- (void)addGestureRecognizersToPiece;
-- (void)sellongPressGesture:(UILongPressGestureRecognizer*)sender;
+@property (strong, nonatomic) IBOutlet UIButton *flashButton;
+@property (strong, nonatomic) IBOutlet UIView *transparentView;
 
 
 
