@@ -32,6 +32,7 @@
     
     GridView *gridView;
     LevelView *levelView;
+    LevelView *levelViewAccel;
     
 }
 
@@ -84,6 +85,8 @@
     [blightness setBrightness:-0.5];
 
     [stillCamera startCameraCapture];
+    
+
     
     [self addGestureRecognizersToPiece];
 }
@@ -330,22 +333,31 @@
 #pragma mark - Private Methods
 
 - (void)accelerometer:(UIAccelerometer *)accelerometer didAccelerate:(UIAcceleration *)acceleration {
+//    if (acceleration.x > -0.01 && acceleration.x < 0.01) {
+        levelView.backgroundColor = [UIColor clearColor];
+        levelView.userInteractionEnabled = NO;
+        [self.view addSubview:levelView];
+        [levelView setTransform:CGAffineTransformMakeTranslation(0, -7.0)];
+        [self.view bringSubviewToFront:levelView];
+        [levelView drawRect:self.view.frame];
+        
+        levelView.alpha = 0.5;
+//    }
     NSLog(@"%f",acceleration.x);
-    
-    levelView.backgroundColor = [UIColor clearColor];
-    levelView.userInteractionEnabled = NO;
-    [self.view addSubview:levelView];
-    [levelView setTransform:CGAffineTransformMakeTranslation(0, -20.0)];
-    [self.view bringSubviewToFront:levelView];
-    [levelView drawRectAccel:self.view.frame accelX:acceleration.x];
-    
-    levelView.alpha = 0.5;
 }
 
 - (IBAction)showLevel:(id)sender {
-    [[UIAccelerometer sharedAccelerometer] setUpdateInterval:0.1];
-    [[UIAccelerometer sharedAccelerometer] setDelegate:self];
-    levelView = [[LevelView alloc] initWithFrame:self.view.frame];
+    if (levelFlag ==0) {
+        [[UIAccelerometer sharedAccelerometer] setUpdateInterval:0.1];
+        [[UIAccelerometer sharedAccelerometer] setDelegate:self];
+        levelView = [[LevelView alloc] initWithFrame:self.view.frame];
+        levelFlag = 1;
+    }else if (levelFlag ==1){
+        [levelView removeFromSuperview];
+        [[UIAccelerometer sharedAccelerometer] setDelegate:nil];
+        levelFlag = 0;
+    }
+    
     
 }
 

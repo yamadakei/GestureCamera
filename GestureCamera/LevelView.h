@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface LevelView : UIView
-- (void)drawRectAccel:(CGRect)rect accelX:(NSInteger)x;
+
+- (void)drawRectAccel:(CGRect)rect accel:(CGFloat)accel;
+
 
 @end

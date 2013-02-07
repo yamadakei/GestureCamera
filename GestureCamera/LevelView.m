@@ -19,7 +19,7 @@
     return self;
 }
 
-- (void)drawRectAccel:(CGRect)rect accelX:(NSInteger)x {
+- (void)drawRect:(CGRect)rect{
     
     UIBezierPath *topPath = [UIBezierPath bezierPath];
     [topPath moveToPoint:CGPointMake(0, 200)];
@@ -28,14 +28,18 @@
     [[UIColor whiteColor] setStroke];
     
     [topPath stroke];
+}
+
+- (void)drawRectAccel:(CGRect)rect accel:(CGFloat)accel {
     
-    UIBezierPath *topPath2 = [UIBezierPath bezierPath];
-    [topPath2 moveToPoint:CGPointMake(0, 200-x)];
-    [topPath2 addLineToPoint:CGPointMake(320, 200+x)];
+    UIBezierPath *topPath = [UIBezierPath bezierPath];
+    [topPath moveToPoint:CGPointMake(0, 200-accel*10)];
+    [topPath addLineToPoint:CGPointMake(320, 200+accel*10)];
     
     [[UIColor redColor] setStroke];
     
-    [topPath2 stroke];
+    [topPath stroke];
 }
+
 
 @end
