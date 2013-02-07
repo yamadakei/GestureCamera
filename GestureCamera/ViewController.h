@@ -10,10 +10,15 @@
 #import "GPUImage.h"
 
 @interface ViewController : UIViewController
+
 @property (strong, nonatomic) IBOutlet GPUImageView *imageView;
 @property (strong, nonatomic) IBOutlet UIButton *flashButton;
 @property (strong, nonatomic) IBOutlet UIView *transparentView;
+@property (strong, nonatomic) IBOutlet UIButton *swipeView;
+@property (strong, nonatomic) IBOutlet UIButton *levelButton;
+@property (strong, nonatomic) IBOutlet UIButton *gridButton;
 
-
+- (IBAction)showLevel:(id)sender;
+- (IBAction)showGrid:(id)sender;
 
 @end

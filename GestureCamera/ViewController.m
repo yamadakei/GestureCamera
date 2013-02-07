@@ -10,6 +10,9 @@
 #import <AssetsLibrary/AssetsLibrary.h>
 #import <AVFoundation/AVFoundation.h>
 #import <AudioToolbox/AudioToolbox.h>
+#import <CoreMotion/CoreMotion.h>
+#import "GridView.h"
+#import "LevelView.h"
 
 @interface ViewController ()
 {
@@ -22,8 +25,14 @@
     GPUImageFilter *endFilter;
     
     NSInteger flashFlag;
+    NSInteger gridFlag;
+    NSInteger levelFlag;
     CGAffineTransform currentTransForm;
     CGAffineTransform pinchTransform;
+    
+    GridView *gridView;
+    LevelView *levelView;
+    
 }
 
 @end
@@ -37,6 +46,8 @@
     [super viewDidLoad];
     
     flashFlag = 0;
+    gridFlag = 0;
+    levelFlag = 0;
     
     [self.flashButton setImage:[UIImage imageNamed:@"flashOff"] forState:UIControlStateNormal];
     
@@ -92,6 +103,7 @@
     UITapGestureRecognizer* doubleTapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleDoubleTapGesture:)];
     UIPinchGestureRecognizer* pinchGesture = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(handlePinchGesture:)];
     UITapGestureRecognizer* twoFingerTapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTwoFingerTapGesture:)];
+    UISwipeGestureRecognizer *swipeGesture = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipeGesture:)];
     
     tapGesture.numberOfTapsRequired = 1;
     
@@ -108,6 +120,8 @@
     
     twoFingerTapGesture.numberOfTouchesRequired = 2;
     
+    swipeGesture.direction = UISwipeGestureRecognizerDirectionUp;
+    
     [self.imageView addGestureRecognizer:longPressGesture];
     [self.imageView addGestureRecognizer:twoFingersLongPressGesture];
     [self.imageView addGestureRecognizer:panGesture];
@@ -115,11 +129,34 @@
     [self.imageView addGestureRecognizer:doubleTapGesture];
     [self.imageView addGestureRecognizer:twoFingerTapGesture];
     [self.view addGestureRecognizer:pinchGesture];
+    [self.swipeView addGestureRecognizer:swipeGesture];
     
 }
 
 
 #pragma mark - Gesture Methods
+
+- (void)handleSwipeGesture:(UISwipeGestureRecognizer *)recognizer
+{
+    [UIView animateWithDuration:.2 delay:.2 options:UIViewAnimationTransitionNone animations:^{
+        if (recognizer.direction == UISwipeGestureRecognizerDirectionUp) {
+            
+            [self.swipeView setTransform:CGAffineTransformMakeTranslation(0, -40.0)];
+            [self.levelButton setTransform:CGAffineTransformMakeTranslation(0, -40.0)];
+            [self.gridButton setTransform:CGAffineTransformMakeTranslation(0, -40.0)];
+        }else if (recognizer.direction == UISwipeGestureRecognizerDirectionDown){
+            [self.swipeView setTransform:CGAffineTransformMakeTranslation(0,0)];
+            [self.levelButton setTransform:CGAffineTransformMakeTranslation(0,0)];
+            [self.gridButton setTransform:CGAffineTransformMakeTranslation(0,0)];
+        }
+    } completion:^(BOOL finished) {
+        if (recognizer.direction == UISwipeGestureRecognizerDirectionUp) {
+            recognizer.direction = UISwipeGestureRecognizerDirectionDown;
+        }else{
+            recognizer.direction = UISwipeGestureRecognizerDirectionUp;
+        }
+    }];
+}
 
 - (void) handlePinchGesture:(UIPinchGestureRecognizer*) sender {
 //    UIPinchGestureRecognizer* pinch = (UIPinchGestureRecognizer*)sender;
@@ -251,7 +288,6 @@
     [filterGroupForCrop setInitialFilters:@[firstFilter]];
     [filterGroupForCrop setTerminalFilter:crop];
     
-        // 指定したFilterがかかった、画像が取得できる。そのために、プロパティでfilterをもたせている。
         [stillCamera capturePhotoAsImageProcessedUpToFilter:filterGroupForCrop withCompletionHandler:^(UIImage *processedImage, NSError *error){
             ALAssetsLibrary *library = [[ALAssetsLibrary alloc] init];
             
@@ -291,4 +327,55 @@
 
 }
 
+#pragma mark - Private Methods
+
+- (void)accelerometer:(UIAccelerometer *)accelerometer didAccelerate:(UIAcceleration *)acceleration {
+    NSLog(@"%f",acceleration.x);
+    
+    levelView.backgroundColor = [UIColor clearColor];
+    levelView.userInteractionEnabled = NO;
+    [self.view addSubview:levelView];
+    [levelView setTransform:CGAffineTransformMakeTranslation(0, -20.0)];
+    [self.view bringSubviewToFront:levelView];
+    [levelView drawRectAccel:self.view.frame accelX:acceleration.x];
+    
+    levelView.alpha = 0.5;
+}
+
+- (IBAction)showLevel:(id)sender {
+    [[UIAccelerometer sharedAccelerometer] setUpdateInterval:0.1];
+    [[UIAccelerometer sharedAccelerometer] setDelegate:self];
+    levelView = [[LevelView alloc] initWithFrame:self.view.frame];
+    
+}
+
+- (IBAction)showGrid:(id)sender {
+    if (gridFlag == 0) {
+        
+        gridView = [[GridView alloc] initWithFrame:self.view.frame];
+        gridView.backgroundColor = [UIColor clearColor];
+        gridView.userInteractionEnabled = NO;
+        [self.view addSubview:gridView];
+        [gridView setTransform:CGAffineTransformMakeTranslation(0, -20.0)];
+        [self.view bringSubviewToFront:gridView];
+        [gridView drawRect:self.view.frame];
+        
+        gridView.alpha = 0.3;
+        
+        [self.view bringSubviewToFront:self.swipeView];
+        [self.view bringSubviewToFront:self.gridButton];
+        [self.view bringSubviewToFront:self.levelButton];
+        [self.view bringSubviewToFront:self.flashButton];
+        
+        gridFlag = 1;
+        
+    }else if(gridFlag == 1){
+        
+        [gridView removeFromSuperview];
+        
+        gridFlag = 0;
+        
+    }
+    
+}
 @end;
